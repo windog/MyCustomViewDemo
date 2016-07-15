@@ -9,11 +9,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!" />
-
         <com.windy.example.mycustomviewdemo.CircleDotLoadingView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -44,10 +39,12 @@
             app:whorlview_strokeWidth="16"
             app:whorlview_sweepAngle="135" />
 
+        <!--space是Android 4.0中新增的一个控件，它实际上可以用来分隔不同的控件，其中形成一个空白的区域。
         <Space
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1" />
+        -->
 
         <Button
             android:id="@+id/button"
@@ -55,4 +52,5 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal" />
     </LinearLayout>
+
 </ScrollView>
