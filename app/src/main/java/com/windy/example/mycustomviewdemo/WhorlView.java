@@ -41,14 +41,24 @@ public class WhorlView extends View {
     //弧宽
     private float mStrokeWidth;
 
+    /* 自定义 View 一般会有三个构造方法，第一个构造方法如下， 一般是在 Java 代码中 new 一个 View 时会被系统自动调用。
+       如：WhorlView whorlView = new WhorlView(this);
+    * */
     public WhorlView(Context context) {
         this(context, null, 0);
     }
 
+    /* 第二个构造函数，一般是在 xml 中添加 View 时会被系统自动调用，因为多了个 AttributeSet 参数。
+            xml 中要定义的各种属性（布局属性，宽高属性以及margin属性等）就存在这个参数中
+    * */
     public WhorlView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
+    /* 第三个构造函数 ，又多了一个 int 型的自定义属性的参数，我们需要写自己的完全定制的 View 时就会在这个函数中写。
+        然后，在前两个构造函数中，调用这个自己写的构造函数。
+        因为系统不会自动调用这个完全自定义的函数
+    * */
     public WhorlView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         //默认外层最慢270度/s
